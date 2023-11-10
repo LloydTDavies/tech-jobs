@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:main": "nx serve tech-jobs-pwa",
-    "build": "nx affected -t build",
-    "test": "nx affected -t test",
-    "lint": "nx affected -t lint"
+    "start": "nx serve tech-jobs-pwa",
+    "build": "nx run tech-jobs-pwa:build",
+    "test": "nx run tech-jobs-pwa:test",
+    "lint": "nx run tech-jobs-pwa:lint"
   },
   "private": true,
   "dependencies": {

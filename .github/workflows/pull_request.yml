@@ -1,5 +1,5 @@
-name: PR Workflow
-on: push
+name: Pull Request workflow
+on: pull_request
 jobs:
   test:
     runs-on: ubuntu-latest
