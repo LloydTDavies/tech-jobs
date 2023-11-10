@@ -1,0 +1,18 @@
+<div class="job">
+  <div class="job__header">
+    <div>{{ job.title }} - {{ job.level }}</div>
+    <div>
+      <button
+        mat-icon-button
+        aria-label="bookmark icon"
+      >
+        <mat-icon>bookmark</mat-icon>
+      </button>
+    </div>
+  </div>
+  <small>{{ job.company }} - {{ job.location }}</small>
+  <div>
+    Salary {{ job.salary.min | currency : job.salary.currency }} -
+    {{ job.salary.max | currency : job.salary.currency }}
+  </div>
+</div>
