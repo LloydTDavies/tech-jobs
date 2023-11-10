@@ -1,0 +1,23 @@
+{
+  "name": "tech-jobs-pwa-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/tech-jobs-pwa-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/apps/tech-jobs-pwa-e2e"],
+      "options": {
+        "config": "apps/tech-jobs-pwa-e2e/playwright.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/tech-jobs-pwa-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "implicitDependencies": ["tech-jobs-pwa"]
+}
