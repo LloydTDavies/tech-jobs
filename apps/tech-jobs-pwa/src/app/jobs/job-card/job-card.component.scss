@@ -1,0 +1,12 @@
+.job {
+  border: 1px solid;
+  border-radius: 10px;
+  margin-block-start: 20px;
+  padding: 25px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
