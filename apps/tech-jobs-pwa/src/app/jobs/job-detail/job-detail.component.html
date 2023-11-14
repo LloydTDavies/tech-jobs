@@ -1,3 +1,51 @@
 <ng-container *ngIf="job$ | async as job">
-{{job.id}} - {{job.title}}
+  <mat-card class="job">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title> {{ job.title }} </mat-card-title>
+        <mat-card-subtitle>
+          <div class="job__detail">
+            <mat-icon>map</mat-icon>
+            <p>{{ job.location }}</p>
+          </div>
+          <div class="job__detail">
+            <mat-icon>payments</mat-icon>
+            <p>
+              Salary {{ job.salary.min | currency : job.salary.currency }} -
+              {{ job.salary.max | currency : job.salary.currency }}
+            </p>
+          </div>
+          <div class="job__detail">
+            <mat-icon>apartment</mat-icon>
+            <p>
+              {{ job.company.name }}
+            </p>
+          </div>
+          <div class="job__detail">
+            <mat-icon>schedule</mat-icon>
+            <p>
+              {{ job.type }}
+            </p>
+          </div>
+          <div class="job__detail">
+            <mat-icon>calendar_month</mat-icon>
+            <p>{{ job.posted | date }}</p>
+          </div>
+        </mat-card-subtitle>
+        <img class="job__image" matCardImage [src]="job.company.img" />
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      <h2>Description</h2>
+      <p>
+        {{ job.description }}
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+      <mat-card-actions align="end">
+        <button mat-icon-button><mat-icon>save</mat-icon></button>
+        <button mat-raised-button color="primary">Apply</button>
+      </mat-card-actions>
+    </mat-card-footer>
+  </mat-card>
 </ng-container>
