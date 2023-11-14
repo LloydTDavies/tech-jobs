@@ -1,6 +1,6 @@
 <ul>
   @for(job of jobs; track job) {
-  <li>
+  <li [routerLink]="job.id">
     <tech-jobs-job-card [job]="job" />
   </li>
   }

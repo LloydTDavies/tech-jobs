@@ -4,6 +4,7 @@
 dist
 tmp
 /out-tsc
+.firebase/
 
 # dependencies
 node_modules
@@ -39,4 +40,5 @@ testem.log
 Thumbs.db
 
 .nx/cache
+.nx
 .angular
